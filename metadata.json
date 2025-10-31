@@ -1,0 +1,8 @@
+{
+  "name": "TalesCam AI",
+  "description": "A voice-controlled web application that captures photos using voice commands and generates personalized stories based on the captured images. The app operates entirely without keyboard interaction, using only voice commands for complete hands-free operation.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}

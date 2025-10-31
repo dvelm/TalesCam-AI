@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TalesCam AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Roboto', 'sans-serif'],
+              display: ['Orbitron', 'sans-serif'],
+            },
+            colors: {
+              'brand-primary': '#E91E63',
+              'brand-secondary': '#2196F3',
+              'brand-light': '#64B5F6',
+              'brand-dark': '#1976D2',
+              'base-100': '#000000',
+              'base-200': '#1a237e',
+              'base-300': '#2a3441',
+              'sidebar-bg': '#1a237e',
+              'sidebar-border': '#334155',
+              'content-100': '#FFFFFF',
+              'content-200': '#B0BEC5',
+              'accent-purple': '#673AB7',
+              'accent-pink': '#E91E63',
+              'mic-pink': '#E91E63',
+              'mic-purple': '#3F51B5',
+            },
+            keyframes: {
+              pulse: {
+                '0%, 100%': { opacity: 1, transform: 'scale(1)' },
+                '50%': { opacity: 0.7, transform: 'scale(1.1)' },
+              },
+              fadeIn: {
+                '0%': { opacity: 0, transform: 'translateY(20px)' },
+                '100%': { opacity: 1, transform: 'translateY(0)' },
+              },
+              slideIn: {
+                '0%': { transform: 'translateY(100%)' },
+                '100%': { transform: 'translateY(0)' },
+              },
+              countdown: {
+                '0%, 100%': { transform: 'scale(1)', opacity: 1 },
+                '50%': { transform: 'scale(1.5)', opacity: 0 },
+              },
+              illuminate: {
+                '0%': { 'background-position': '-200% center' },
+                '100%': { 'background-position': '200% center' },
+              },
+              micPulse: {
+                '0%': { transform: 'scale(1)', boxShadow: '0 0 20px rgba(63, 81, 181, 0.3)' },
+                '50%': { transform: 'scale(1.05)', boxShadow: '0 0 40px rgba(63, 81, 181, 0.6)' },
+                '100%': { transform: 'scale(1)', boxShadow: '0 0 20px rgba(63, 81, 181, 0.3)' },
+              },
+              textGlow: {
+                '0%, 100%': { textShadow: '0 0 5px rgba(100, 181, 246, 0.5)' },
+                '50%': { textShadow: '0 0 15px rgba(100, 181, 246, 0.8), 0 0 25px rgba(100, 181, 246, 0.6)' },
+              },
+              backgroundMove: {
+                '0%': { backgroundPosition: '0% 50%' },
+                '50%': { backgroundPosition: '100% 50%' },
+                '100%': { backgroundPosition: '0% 50%' },
+              },
+              bounce: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              },
+            },
+            animation: {
+              pulse: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              fadeIn: 'fadeIn 0.6s ease-out forwards',
+              slideIn: 'slideIn 0.5s cubic-bezier(0.25, 1, 0.5, 1) forwards',
+              countdown: 'countdown 1s ease-in-out infinite',
+              illuminate: 'illuminate 3s linear infinite',
+              micPulse: 'micPulse 2s ease-in-out infinite',
+              textGlow: 'textGlow 2s ease-in-out infinite',
+              backgroundMove: 'backgroundMove 10s ease infinite',
+              bounce: 'bounce 1s infinite',
+            }
+          },
+        },
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://cdn.jsdelivr.net/npm/react-dom@^19.2.0/",
+    "react/": "https://cdn.jsdelivr.net/npm/react@^19.2.0/",
+    "react": "https://cdn.jsdelivr.net/npm/react@^19.2.0",
+    "@google/genai": "https://cdn.jsdelivr.net/npm/@google/generative-ai@^1.27.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-gray-900 font-sans" style="overflow: hidden; touch-action: manipulation;">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
